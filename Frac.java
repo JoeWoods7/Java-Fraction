@@ -2,9 +2,13 @@ import java.util.Formatter;
 public class Frac{
 
 public Frac(int a, int b){
-numerator = a;
-denominator= b;
+setNumDem(a,b);
 }
+	
+	public setNumDem(int a, int b){
+		numerator = a;
+		denominator= b;
+	}
 
 public Frac(double a){
 frac = DoubleToFraction(a);
@@ -61,8 +65,8 @@ int maxIterations = 20;
         }
 
         String result = String.format((wholeNumberPart > 0 ? wholeNumberPart + " " : "") + "%1$d/%2$d", (int)n, (int)d[t] );
-	numerator = (int)n;
-denominator = (int)d[t];
+	
+	    setNumDem((int)n, (int)d[t]);
 	return result;
     }
 
